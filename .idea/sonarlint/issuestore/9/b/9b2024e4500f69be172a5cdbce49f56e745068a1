@@ -1,0 +1,12 @@
+
+”
+java:S2095"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(äêˆ²øÿÿÿÿ8ÒØî1J$a1b76363-7464-4a1b-bd8b-4c9dc5db20ce
+¼
+java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ÎåŠ«8 ÒØî1J$e4ebdbad-d4e2-4499-b845-03e5909b86a5
+»
+java:S1130"xRemove the declaration of thrown exception 'java.lang.NoSuchMethodException', as it cannot be thrown from method's body.(ÎåŠ«8 ÒØî1J$4071ea34-9d97-4f13-82b2-cd8f1dd54be3
+È
+java:S1130"„Remove the declaration of thrown exception 'java.lang.reflect.InvocationTargetException', as it cannot be thrown from method's body.(ÎåŠ«8 ÒØî1J$5328de92-ce53-4a42-a130-872c44d672bf
+}	java:S125"<This block of commented-out lines of code should be removed.(’”¡~8¡ÒØî1J$080661ab-ce47-46f3-a004-fa7cccd7b36a
+o
+java:S3011",This accessibility update should be removed.(â·Ò8¤ÒØî1J$09b44a8e-ffa0-4b37-a279-50d58a575643
