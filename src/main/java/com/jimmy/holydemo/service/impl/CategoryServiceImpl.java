@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 @Service("categoryService")
 public class CategoryServiceImpl extends ServiceImpl<CategoryDao, Category> implements CategoryService {
     @Autowired
+    //注入公共模块的ArticleService接口
     private ArticleService articleService;
     @Override
     //查询分类列表的核心代码
