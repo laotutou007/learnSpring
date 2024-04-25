@@ -11,6 +11,7 @@ import com.jimmy.holydemo.entity.Category;
 import com.jimmy.holydemo.service.ArticleService;
 import com.jimmy.holydemo.service.CategoryService;
 import com.jimmy.holydemo.utils.BeanCoryUtils;
+import com.jimmy.holydemo.vo.ArticleDetailVo;
 import com.jimmy.holydemo.vo.ArticleListVo;
 import com.jimmy.holydemo.vo.HotArticleVO;
 import com.jimmy.holydemo.vo.PageVo;
@@ -81,5 +82,20 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         //把上面那行的查询结果和文章总数封装在PageVo(我们写的实体类)
         PageVo pageVo = new PageVo(articleListVos,page.getTotal());
         return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult getArticleDetail(Long id) {
+        Article article = getById(id);
+        ArticleDetailVo articleDetailVo = BeanCoryUtils.copyBean(article, ArticleDetailVo.class);
+        Long categoryId = articleDetailVo.getCategoryId();
+        Category category = categoryService.getById(categoryId);
+        if (category != null){
+            articleDetailVo.setCategoryName(category.getName());
+        }
+
+        return ResponseResult.okResult(articleDetailVo);
+
+
     }
 }

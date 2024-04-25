@@ -9,4 +9,6 @@ public interface ArticleService extends IService<Article> {
     ResponseResult hotArticleList();
     //分类查询文章列表
     ResponseResult articleList(Integer pageNum, Integer pageSize, Long categoryId);
+
+    ResponseResult getArticleDetail(Long id);
 }
